@@ -1,0 +1,148 @@
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    header {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.192)), url(clay-banks-u27Rrbs9Dwc-unsplash.jpg);
+        background-size: cover;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    
+    nav {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .logo {
+        font-size: 2em;
+        letter-spacing: 2px;
+        color: white;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        position: relative;
+    }
+    
+    .menu a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        border-bottom: 3px solid red;
+        transition: 0.4s linear;
+    }
+    
+    .menu a:hover:before {
+        width: 90%;
+    }
+    
+    .register a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        background: red;
+        border-radius: 8px;
+        transition: 0.4s;
+    }
+    
+    .register a:hover {
+        background: transparent;
+        border: 1px solid red;
+    }
+    
+    .htext {
+        max-width: 650px;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+    }
+    
+    .htext span {
+        letter-spacing: 10px;
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .htext h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+    
+    .htext a {
+        text-decoration: none;
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        border-radius: 8px;
+        transition: 0.4s;
+        display: inline-block;
+    }
+    
+    .htext a:hover {
+        background: transparent;
+        border: 1px solid red;
+    }
+
+  
+
+    @media screen and (max-width: 768px) {
+        .menu {
+            flex-direction: column;
+        }
+        .menu a {
+            margin-bottom: 10px;
+        }
+        .htext h1 {
+            font-size: 2.5em;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .htext span {
+            font-size: 14px;
+        }
+        .htext h1 {
+            font-size: 2em;
+        }
+        .register a,
+        .menu a {
+            font-size: 16px;
+        }
+    }
